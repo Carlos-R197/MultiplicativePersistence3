@@ -15,6 +15,8 @@ type
 	procedure TearDown; override;
   published
     procedure FirstTest;
+	procedure SecondTest;
+	procedure ThirdTest;
   end;
   
 implementation  
@@ -32,6 +34,16 @@ end;
 procedure TTestCase1.FirstTest;
 begin
   AssertEquals(0, FPersistence.Persistence(8))
+end;
+
+procedure TTestCase1.SecondTest;
+begin
+  AssertEquals(3, FPersistence.Persistence(86))
+end;
+
+procedure TTestCase1.ThirdTest;
+begin
+  AssertEquals(0, FPersistence.Persistence(796))
 end;
 
 initialization
