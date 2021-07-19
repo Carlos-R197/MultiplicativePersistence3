@@ -17,6 +17,9 @@ var
   MultiplicativePersistence: Integer;
   Temp: Integer;
 begin
+  if Num < 0 then
+    Num:= Num * -1;
+
   MultiplicativePersistence:= 0;
   while Num > 9 do
   begin
